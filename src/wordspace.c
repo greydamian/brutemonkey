@@ -6,22 +6,63 @@
  */
 
 /*
- * string.h: strlen()
+ * string.h: strlen(), strchr()
  */
 #include <string.h>
 
-static const char *version = "v1.0.0";
-static const char *authors = "Damian Jason Lapidge <grey@greydamian.org>";
-
+/*
+ * Computes the word located at an index within a wordspace. Takes parameters 
+ * for the index within the wordspace {idx}, a pointer to the null-terminated 
+ * character set of the wordspace {chars}, the word length of the wordspace 
+ * {len}.
+ *
+ * On success, a pointer to the resulting word is returned. On error, results 
+ * are not specified.
+ */
 char *getword(long idx, char *word, char *chars, int len) {
-    return NULL;
+    if (len < 1)
+        return word;
+
+    int chars_len = strlen(chars);
+    int chars_idx = idx % chars_len;
+
+    word[len - 1] = chars[chars_idx];
+
+    return getword(idx / chars_len, word, chars, len - 1);
 }
 
+/*
+ * Computes the index for the location of a word within a wordspace. Takes 
+ * parameters for a pointer to the null-terminated word, a pointer to the 
+ * null-terminated character set of the wordspace {chars}, the word length 
+ * {len}.
+ *
+ * On success, the index of the word is returned. On error, results are not 
+ * specified.
+ */
 long getindex(char *word, char *chars, int len) {
-    return 0;
+    if (len < 1)
+        return 0;
+
+    int chars_len = strlen(chars);
+    int chars_idx = strchr(chars, word[len - 1]) - chars;
+
+    return chars_idx + chars_len * getindex(word, chars, len - 1);
 }
 
+/*
+ * Computes the size of a wordspace. The size of a wordspace is defined as the 
+ * number of unique words within the wordspace.
+ *
+ * On success, the size of the wordspace is returned. On error, -1 is returned.
+ */
 long spacesize(char *chars, int len) {
-    return 0;
+    if (len < 0)
+        return -1; /* failure */
+    if (len < 1)
+        return 0; /* empty word space */
+    if (len < 2)
+        return strlen(chars);
+    return strlen(chars) * spacesize(chars, len - 1);
 }
 
