@@ -10,6 +10,8 @@
  */
 #include <string.h>
 
+#include "wordspace.h"
+
 /*
  * Computes the word located at an index within a wordspace. Takes parameters 
  * for the index within the wordspace {idx}, a pointer to the null-terminated 

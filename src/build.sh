@@ -2,7 +2,7 @@
 
 CC="cc"; # c compiler command
 
-SOURCE="brutemonkey.c";
+SOURCE="wordspace.c brutemonkey.c";
 OUTPUT="../bin/brutemonkey";
 
 # compiler & linker flags

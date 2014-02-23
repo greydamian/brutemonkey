@@ -17,7 +17,7 @@
 /*
  * wordspace.c: getword(), getindex(), spacesize()
  */
-#include "wordspace.c"
+#include "wordspace.h"
 
 static const char *prgname = "brutemonkey";
 static const char *version = "v1.0.0";
