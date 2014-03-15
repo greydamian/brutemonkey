@@ -55,6 +55,13 @@ leading zeros) by executing the following command:
 
     $ brutemonkey 0123456789 4
 
+Brutemonkey can also be used to output elements of a wordspace to a file, when 
+combined with output redirection. For example, one could output all binary 
+representations of a nybble to the file "nybbles.txt" by executing the 
+following command:
+
+    $ brutemonkey 01 4 >nybbles.txt
+
 License
 -------
 
