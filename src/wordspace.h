@@ -8,9 +8,9 @@
 #ifndef WORDSPACE_H
 #define WORDSPACE_H
 
-char *getword(long idx, char *word, char *chars, int len);
-long getindex(char *word, char *chars, int len);
-long spacesize(char *chars, int len);
+char *getword(long idx, char *word, char *chars, unsigned int len);
+long getindex(char *word, char *chars, unsigned int len);
+long spacesize(char *chars, unsigned int len);
 
 #endif /* ifndef WORDSPACE_H */
 

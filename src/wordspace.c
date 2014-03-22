@@ -21,7 +21,7 @@
  * On success, a pointer to the resulting word is returned. On error, results 
  * are not specified.
  */
-char *getword(long idx, char *word, char *chars, int len) {
+char *getword(long idx, char *word, char *chars, unsigned int len) {
     if (len < 1)
         return word;
 
@@ -42,7 +42,7 @@ char *getword(long idx, char *word, char *chars, int len) {
  * On success, the index of the word is returned. On error, results are not 
  * specified.
  */
-long getindex(char *word, char *chars, int len) {
+long getindex(char *word, char *chars, unsigned int len) {
     if (len < 1)
         return 0;
 
@@ -58,9 +58,7 @@ long getindex(char *word, char *chars, int len) {
  *
  * On success, the size of the wordspace is returned. On error, -1 is returned.
  */
-long spacesize(char *chars, int len) {
-    if (len < 0)
-        return -1; /* failure */
+long spacesize(char *chars, unsigned int len) {
     if (len < 1)
         return 0; /* empty word space */
     if (len < 2)
