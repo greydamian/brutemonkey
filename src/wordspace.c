@@ -41,6 +41,9 @@ char *getword(long idx, char *word, char *chars, unsigned int len) {
  *
  * On success, the index of the word is returned. On error, results are not 
  * specified.
+ *
+ * TODO: defend against NULL returned by {strchr()} when char in {word} is not 
+ * found in {chars}.
  */
 long getindex(char *word, char *chars, unsigned int len) {
     if (len < 1)
@@ -57,6 +60,8 @@ long getindex(char *word, char *chars, unsigned int len) {
  * number of unique words within the wordspace.
  *
  * On success, the size of the wordspace is returned. On error, -1 is returned.
+ *
+ * TODO: defend against integer overflow.
  */
 long spacesize(char *chars, unsigned int len) {
     if (len < 1)
