@@ -12,6 +12,9 @@
 
 #include "wordspace.h"
 
+static const char *version = "v1.0.0";
+static const char *authors = "Damian Jason Lapidge <grey@greydamian.org>";
+
 /*
  * Computes the word located at an index within a wordspace. Takes parameters 
  * for the index within the wordspace {idx}, a pointer to the null-terminated 
