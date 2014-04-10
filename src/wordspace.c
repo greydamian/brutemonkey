@@ -24,7 +24,7 @@ static const char *authors = "Damian Jason Lapidge <grey@greydamian.org>";
  * On success, a pointer to the resulting word is returned. On error, results 
  * are not specified.
  */
-char *getword(long idx, char *word, char *chars, unsigned int len) {
+char *getword(long idx, char *word, const char *chars, unsigned int len) {
     if (len < 1)
         return word;
 
@@ -48,7 +48,7 @@ char *getword(long idx, char *word, char *chars, unsigned int len) {
  * TODO: defend against NULL returned by {strchr()} when char in {word} is not 
  * found in {chars}.
  */
-long getindex(char *word, char *chars, unsigned int len) {
+long getindex(char *word, const char *chars, unsigned int len) {
     if (len < 1)
         return 0;
 
@@ -66,7 +66,7 @@ long getindex(char *word, char *chars, unsigned int len) {
  *
  * TODO: defend against integer overflow.
  */
-long spacesize(char *chars, unsigned int len) {
+long spacesize(const char *chars, unsigned int len) {
     if (len < 1)
         return 0; /* empty word space */
     if (len < 2)
