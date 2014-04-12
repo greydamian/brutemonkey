@@ -48,7 +48,7 @@ char *getword(long idx, char *word, const char *chars, unsigned int len) {
  * TODO: defend against NULL returned by {strchr()} when char in {word} is not 
  * found in {chars}.
  */
-long getindex(char *word, const char *chars, unsigned int len) {
+long getindex(const char *word, const char *chars, unsigned int len) {
     if (len < 1)
         return 0;
 
