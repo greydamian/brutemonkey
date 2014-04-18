@@ -55,12 +55,11 @@ leading zeros) by executing the following command:
 
     $ brutemonkey 0123456789 4
 
-Brutemonkey can also be used to output elements of a wordspace to a file, when 
-combined with output redirection. For example, one could output all binary 
-representations of a nybble to the file "nybbles.txt" by executing the 
-following command:
+Brutemonkey could also be used to output representations for all outcomes of a 
+sequence of independent events. For example, one could output representations 
+for tossing a coin 3 times by executing the following command:
 
-    $ brutemonkey 01 4 >nybbles.txt
+    $ brutemonkey HT 3
 
 License
 -------
