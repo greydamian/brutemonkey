@@ -55,9 +55,9 @@ leading zeros) by executing the following command:
 
     $ brutemonkey 0123456789 4
 
-Brutemonkey could also be used to output representations for all outcomes of a 
-sequence of independent events. For example, one could output representations 
-for tossing a coin 3 times by executing the following command:
+Brutemonkey could also be used to represent the possible outcomes of a series 
+of independent events. For example, one could output representations for 3 coin 
+tosses by executing the following command:
 
     $ brutemonkey HT 3
 
