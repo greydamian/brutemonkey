@@ -17,9 +17,9 @@ characters is equal to the wordspace's word length.
 Compatibility
 -------------
 
-    * Linux
-    * Unix
-    * OS X
+* Linux
+* Unix
+* OS X
 
 Installation
 ------------
