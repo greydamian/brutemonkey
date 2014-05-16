@@ -35,7 +35,7 @@ struct cmdopts {
  * Outputs usage information to {stderr}.
  */
 void print_usage() {
-    fprintf(stderr, "brutemonkey <char set> <word length>\n");
+    fprintf(stderr, "usage: brutemonkey <char set> <word length>\n");
 }
 
 /*
