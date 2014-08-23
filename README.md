@@ -4,7 +4,7 @@ brutemonkey
 Overview
 --------
 
-Brutemonkey is a wordspace exploration tool.
+Wordspace exploration tool.
 
 By default, brutemonkey will output all unique words from a given wordspace, in 
 a logically sequential order.
