@@ -1,21 +1,20 @@
 #! /usr/bin/env bash
 
-# Copyright (c) 2014 Damian Jason Lapidge
+# Copyright (c) 2015 Damian Jason Lapidge
 #
 # The contents of this file are subject to the terms and conditions defined 
 # within the file LICENSE.txt, located within this project's root directory.
 
-CC="cc"; # c compiler command
-
-SOURCE="wordspace.c brutemonkey.c";
-OUTPUT="../bin/brutemonkey";
-
-# compiler & linker flags
+CC="cc";
 CFLAGS="";
 LDFLAGS="";
+LDLIBS="";
+
+SRC="./src/wordspace.c ./src/brutemonkey.c";
+OUT="./bin/brutemonkey";
 
 # create output directory
-mkdir -p ../bin;
+mkdir -p ./bin;
 
 if [ "$(which $CC)" == "" ];
 then
@@ -24,5 +23,5 @@ then
 fi
 
 # compile/link source code
-$CC $CFLAGS -o $OUTPUT $SOURCE $LDFLAGS;
+$CC $CFLAGS $SRC $LDFLAGS $LDLIBS -o $OUT;
 
