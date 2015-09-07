@@ -6,16 +6,18 @@ TODO
 ----
 * Switch from build script to setup script [v2.0.0]
     * Add build/install/clean options
-* Add index select/range option (-I <i>[-<j>]) [v2.0.0]
-    * Outputs wordspace elements in the interval [i, j)
-* Add word select/range option (-W <first>[-<last>]) [v2.0.0]
+* Add initial index option (-I <i>) [v2.0.0]
+    * Outputs wordspace elements starting at index i
+* Add initial word option (-W <word>) [v2.0.0]
 * Add print help option (-h) [v2.0.0]
 * Add long options [v2.1.0]
 * Add size option (-s) [v3.0.0]
-    * Just reports size of specified wordspace
+    * Just reports/outputs the size of specified wordspace
 * Add count option (-c <n>) [v3.0.0]
-    * Limits output to first n elements of wordspace
+    * Limits output to a max of n elements from wordspace
 * Switch from build/setup script to Makefile [v4.0.0]
+* Add support for word patterns/masks [v4.0.0]
+    * Uses multiple character sets
 * Add pseudo device file option (-d [path]) [v5.0.0]
     * Optional path param to override hardcoded default (e.g. /dev/monkey)
 
