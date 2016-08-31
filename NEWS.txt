@@ -5,19 +5,22 @@ brutemonkey v1.0.0
 TODO
 ----
 * Switch from build script to setup script [v2.0.0]
-    * Add build/install/clean options
-* Add initial index option (-I <i>) [v2.0.0]
-    * Outputs wordspace elements starting at index i
-* Add initial word option (-W <word>) [v2.0.0]
-* Add print help option (-h) [v2.0.0]
-* Add long options [v2.1.0]
-* Add size option (-s) [v3.0.0]
-    * Just reports/outputs the size of specified wordspace
-* Add count option (-c <n>) [v3.0.0]
-    * Limits output to a max of n elements from wordspace
+    * Addition of build/install/clean arguments
+* Addition of element count argument [v2.0.0]
+    * `brutemonkey <chars> <len> [<count>]`
+    * Only outputs elements in the interval [0, <count>)
+    * Limits output to a max of <count> elements
+* Addition of starting index option [v2.0.0]
+    * `brutemonkey <chars> <len> [<count> [<start_index>]]`
+    * Outputs <count> wordspace elements beginning at <start_index>
+* Addition of print help option (-h) [v2.0.0]
+* Addition of size option (-s) [v2.1.0]
+    * Just reports/outputs the number of elements which would be output if the 
+      brutemonkey were executed with the same arguments
+    * For example, `brutemonkey -s 01 2` would output 4
+* Addition of long options [v3.0.0]
 * Switch from build/setup script to Makefile [v4.0.0]
-* Add support for word patterns/masks [v4.0.0]
+* Addition of support for word patterns/masks [v5.0.0]
     * Uses multiple character sets
-* Add pseudo device file option (-d [path]) [v5.0.0]
+* Addition of pseudo device file option (-d [<path>]) [v6.0.0]
     * Optional path param to override hardcoded default (e.g. /dev/monkey)
-
